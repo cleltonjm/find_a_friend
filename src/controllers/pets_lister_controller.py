@@ -16,14 +16,14 @@ class PetListerController:
         return pets
 
     def __format_response(self, pets: List[PetsTable]) -> Dict:
-        formated_pets = []
+        formatted_pets = []
         for pet in pets:
-            formated_pets.append({ "name": pet.name, "type": pet.type, "id": pets.id })
+            formatted_pets.append({ "name": pet.name, "id": pet.id })
 
         return {
             "data": {
                 "type": "Pets",
-                "count": len(formated_pets),
-                "attributes": formated_pets
+                "count": len(formatted_pets),
+                "attributes": formatted_pets
             }
         }

@@ -1,5 +1,6 @@
 #pylint: disable=unused-argument
-from .person_finder_controller import PersonFinderController
+from src.controllers.person_finder_controller import PersonFinderController
+
 
 class MockPerson():
     def __init__(self, first_name, last_name, pet_name, pet_type) -> None:
@@ -16,6 +17,7 @@ class MockPeopleRepository:
             pet_name="Fluffy",
             pet_type="cat"
         )
+
 
 def test_find():
     controller = PersonFinderController(MockPeopleRepository())
