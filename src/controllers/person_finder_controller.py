@@ -1,7 +1,7 @@
 from typing import Dict
+from src.errors.error_types.http_not_found import HttpNotFoundError
 from src.models.sqlite.entities.people import PeopleTable
 from src.models.sqlite.interfaces.people_repository import PeopleRepositoryInterface
-from src.errors.erros_types.http_not_found import HttpNotFoundError
 from .interfaces.person_finder_controller import PersonFinderControllerInterface
 
 class PersonFinderController(PersonFinderControllerInterface):
